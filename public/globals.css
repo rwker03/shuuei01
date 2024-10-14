@@ -1,0 +1,92 @@
+/* Basic Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern Gradient Background */
+.min-h-screen { 
+  background: linear-gradient(to bottom right, #000000, #2962ff); /* Blue-Black Gradient */
+}
+
+/* Grayish Black Border */
+.border {
+  border: 2px solid #333333; /* Grayish-black border */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+/* Worker Type Button Styles */
+.grid button {
+  padding: 10px; 
+  color: white; /* Set default font color to white */
+}
+
+.grid button:hover { 
+  background-color: #4285f4; 
+  cursor: pointer; 
+}
+
+.grid button.bg-blue-600 { 
+  background-color: #007bff; 
+  border: 2px solid #007bff; 
+}
+
+/* Worker Count Button Styles */
+.grid button {
+  color: white; /* Set default font color to white */
+}
+
+/* Style for specific worker count buttons (2, 6, 12, 18, 24) */
+.grid button:nth-child(2),
+.grid button:nth-child(6),
+.grid button:nth-child(12),
+.grid button:nth-child(18),
+.grid button:nth-child(24) {
+  background-color: #007bff;
+  border: 2px solid #007bff;
+}
+
+/* Style for the selected button */
+.grid button:nth-child(6n) { 
+  background-color: #007bff; 
+  border: 2px solid #007bff;
+}
+
+/* Grid layout for worker count buttons */
+.grid {
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  grid-template-rows: repeat(5, 1fr); /* 5 rows */ /* Added grid-template-rows */
+}
+
+/* Style for non-selected worker type buttons */
+.grid button:not(.bg-blue-600) {
+  background-color: #333333; /* Gray background for non-selected buttons */
+  border: 2px solid #333333; /* Gray border for non-selected buttons */
+}
+
+/* Style for the h1 element */
+h1 {
+  color: white; /* Set the text color to white */
+} 
+
+/* Style for labels (Start Time, End Time) */
+label {
+  color: white; /* Set the text color to white */
+} 
+
+/* Style for added workers, total workers, total hours, overtime, and records */
+.mt-8 h3,
+.mt-8 ul,
+.mt-8 p,
+.mt-8 li {
+  color: white;
+}
+
+/* Style for the Add Workers button */
+.w-full.bg-blue-600 {
+  grid-column: 1 / span 5; /* Span across 5 columns */
+}
